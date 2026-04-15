@@ -1,71 +1,68 @@
 *{
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-
-
-body{
-    display:grid;
-    place-items:center;
-    min-height:100vh;
-    background-color: aqua;
+.container{
+    width:100%;
+    min-height: 100vh;
+    background: linear-gradient(100deg, #4203a9, #90bafc);
+    color: #fff;
+    padding: 10px;
 }
-
-.card{
-    width:auto;
-    background-color: bisque;
-    padding: 3rem 2rem;
-    border-radius: 1rem;
-    box-shadow:0 0 .5rem rgba(0,0,0,.8);
+.calculator{
+    width: 100%;
+    max-width: 600px;
+    margin-left: 10%;
+    margin-top: 10%;
 }
-
-.property{
-    color:black;
+.calculator h1{
+    font-size: 60px;
+}
+.input-box{
+    margin:40px 0;
+    padding: 35px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.3);
     display:flex;
-    align-items: flex-start;
-    margin: 1rem 0;
-    column-gap: 1rem;
-}
-
-.search-form{
-    display:flex;
-    justify-content:center;
     align-items:center;
-    flex-wrap:wrap;
-    width:30vw;
-    height:10vh;
-
-    margin-bottom:2rem;
-    background-color: bisque;
 }
-
-.search-form input{
-    color:white;
-    display:flex;
-    flex-basis:70%;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    
+.input-box input{
+    flex:1;
+    margin-right: 20px;
+    padding: 14px 20px;
+    border:0;
+    outline:0;
+    font-size:18px;
+    border-radius: 5px;
+    position:relative;
 }
-.search-form button{
-    display:flex;
-    flex-basis:30%;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    color:white;
+.input-box button{
+    background: #ffff76;
+    border: 0;
+    outline: 0;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
 }
-
-.search-form button{
-    cursor:pointer;
-    border-left:1px solid #545454;
+.input-box input ::-webkit-calendar-picker-indicator{
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width: auto;
+    position: absolute;
+    background-position:calc(100% - 10px);
+    background-size: 30px;
+    cursor: pointer;
+    postion:center;
 }
-
-.search-form button:hover{
-    background-color: white;
-    color:black;
-    box-shadow: 0 0 .5rem #fff,
-    inset 0 0 .5rem rgba(0,0,0,.8);
-} 
+#result{
+    font-size: 20px;
+}
+#result span{
+    color: #ffff76;
+}
